@@ -21,6 +21,30 @@
   padding: 4px;
 }
 
+.home__header--form {
+  position: relative;
+}
+
+.home__header--form input {
+  width: 100%;
+  border: none;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+.home__header--form button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: none;
+  border: none;
+  margin: 5px;
+  padding: 0 5px;
+  color: grey;
+  border-left: 1px solid grey;
+
+}
+
 .home__header--menu {
   display: flex;
   flex-direction: column;
@@ -30,20 +54,26 @@
 
 /* TABLET */
 
-@media (min-width:481px) {
+@media (min-width:768px) {
 
   .home__header {
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 10px;
     align-items: center;
+    justify-content: space-between;
   }
 
   .home__header--bars {
     display: none;
   }
 
+  .home__header--form {
+    width: 100%;
+    order: 1;
+  }
+
   .home__header--menu {
-    width: 90%;
     flex-direction: row;
     justify-content: space-between;
     gap: 10px;
@@ -55,4 +85,16 @@
     gap: 10px;
   }
 
+}
+
+
+@media (min-width:768px) {
+  .home__header--form {
+    order: 0;
+    width: 50%;
+  }
+
+  .home__header--menu {
+    width: 100%;
+  }
 }
